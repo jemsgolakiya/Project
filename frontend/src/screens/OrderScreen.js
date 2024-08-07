@@ -189,7 +189,7 @@ const itemsPrice = calculateItemsPrice();
                         </Col>
 
                         <Col md={4}>
-                          {item.qty} X €{item.price} = €
+                          {item.qty} X ₹{item.price} = ₹
                           {(item.qty * item.price).toFixed(2)}
                         </Col>
                       </Row>
@@ -212,7 +212,7 @@ const itemsPrice = calculateItemsPrice();
                 <Row>
                   <Col>Products Cost:</Col>
 
-                  <Col>€{itemsPrice}</Col>
+                  <Col>₹{itemsPrice}</Col>
                 </Row>
               </ListGroup.Item>
 
@@ -220,7 +220,7 @@ const itemsPrice = calculateItemsPrice();
                 <Row>
                   <Col>Shipping:</Col>
 
-                  <Col>€{orderDetails.shippingPrice}</Col>
+                  <Col>₹{orderDetails.shippingPrice}</Col>
                 </Row>
               </ListGroup.Item>
 
@@ -228,7 +228,7 @@ const itemsPrice = calculateItemsPrice();
                 <Row>
                   <Col>Tax:</Col>
 
-                  <Col>€{orderDetails.taxPrice}</Col>
+                  <Col>₹{orderDetails.taxPrice}</Col>
                 </Row>
               </ListGroup.Item>
 
@@ -236,7 +236,7 @@ const itemsPrice = calculateItemsPrice();
                 <Row>
                   <Col>Total:</Col>
 
-                  <Col>€{orderDetails.totalPrice}</Col>
+                  <Col>₹{orderDetails.totalPrice}</Col>
                 </Row>
               </ListGroup.Item>
 
