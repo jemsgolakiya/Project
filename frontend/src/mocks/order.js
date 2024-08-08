@@ -101,7 +101,7 @@ class OrderAPI {
       };
 
       const { data } = await axios.put(
-        `/api/orders/${order._id}/deliver/`,
+        `${import.meta.env.BASEURL}/api/orders/${order._id}/deliver/`,
         {},
         config
       );
