@@ -3,7 +3,7 @@ import axios from 'axios';
 class ProductAPI {
   async getProductList(keyword= '' , pageNumber = '') {
     try {
-      const { data } = await axios.get(`/api/products${keyword}`, {
+      const { data } = await axios.get(`${import.meta.env.BASEURL}/api/products${keyword}`, {
         params: {
        
           page: pageNumber
@@ -19,7 +19,7 @@ class ProductAPI {
   
   async getProductDetails(productId) {
     try {
-      const { data } = await axios.get(`/api/products/${productId}`);
+      const { data } = await axios.get(`${import.meta.env.BASEURL}/api/products/${productId}`);
       console.log(data)
       return data;      
     } catch (error) {
@@ -40,7 +40,7 @@ class ProductAPI {
       };
 
       const { data } = await axios.post(
-        `/api/products/${productId}/reviews/`,
+        `${import.meta.env.BASEURL}/api/products/${productId}/reviews/`,
         review,
         config
       );
@@ -54,7 +54,7 @@ class ProductAPI {
 
   async getTopRatedProducts() {
     try {
-      const { data } = await axios.get(`/api/products/top/`);
+      const { data } = await axios.get(`${import.meta.env.BASEURL}/api/products/top/`);
       return data;
     } catch (error) {
       throw error.response && error.response.data.detail

@@ -12,7 +12,7 @@ class OrderAPI {
         },
       };
 
-      const { data } = await axios.post(`/api/orders/add/`, order, config);
+      const { data } = await axios.post(`${import.meta.env.BASEURL}/api/orders/add/`, order, config);
 
       return data;
     } catch (error) {
@@ -33,7 +33,7 @@ class OrderAPI {
         },
       };
 
-      const { data } = await axios.get(`/api/orders/${id}/`, config);
+      const { data } = await axios.get(`${import.meta.env.BASEURL}/api/orders/${id}/`, config);
 
       return data;
     } catch (error) {
@@ -55,7 +55,7 @@ class OrderAPI {
       };
 
       const { data } = await axios.put(
-        `/api/orders/${id}/pay/`,
+        `${import.meta.env.BASEURL}/api/orders/${id}/pay/`,
         paymentResult,
         config
       );
@@ -79,7 +79,7 @@ class OrderAPI {
         },
       };
 
-      const { data } = await axios.get(`/api/orders/myorders/`, config);
+      const { data } = await axios.get(`${import.meta.env.BASEURL}/api/orders/myorders/`, config);
 
       return data;
     } catch (error) {
